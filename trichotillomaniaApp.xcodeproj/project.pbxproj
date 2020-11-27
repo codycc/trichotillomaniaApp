@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		0B2EB92425716CBB00506D88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2EB92325716CBB00506D88 /* AppDelegate.swift */; };
 		0B2EB92625716CBB00506D88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2EB92525716CBB00506D88 /* SceneDelegate.swift */; };
-		0B2EB92825716CBB00506D88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2EB92725716CBB00506D88 /* ViewController.swift */; };
+		0B2EB92825716CBB00506D88 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2EB92725716CBB00506D88 /* MainVC.swift */; };
 		0B2EB92B25716CBB00506D88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B2EB92925716CBB00506D88 /* Main.storyboard */; };
 		0B2EB92E25716CBB00506D88 /* trichotillomaniaApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B2EB92C25716CBB00506D88 /* trichotillomaniaApp.xcdatamodeld */; };
 		0B2EB93025716CBC00506D88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B2EB92F25716CBC00506D88 /* Assets.xcassets */; };
 		0B2EB93325716CBC00506D88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B2EB93125716CBC00506D88 /* LaunchScreen.storyboard */; };
 		0B2EB93E25716CBC00506D88 /* trichotillomaniaAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2EB93D25716CBC00506D88 /* trichotillomaniaAppTests.swift */; };
 		0B2EB94925716CBC00506D88 /* trichotillomaniaAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2EB94825716CBC00506D88 /* trichotillomaniaAppUITests.swift */; };
+		0B2EB96025718A4800506D88 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2EB95F25718A4800506D88 /* EntryCell.swift */; };
+		0B2EB9682571A50A00506D88 /* NewEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2EB9672571A50A00506D88 /* NewEntryVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,7 @@
 		0B2EB92025716CBB00506D88 /* trichotillomaniaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trichotillomaniaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B2EB92325716CBB00506D88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B2EB92525716CBB00506D88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0B2EB92725716CBB00506D88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0B2EB92725716CBB00506D88 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		0B2EB92A25716CBB00506D88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B2EB92D25716CBB00506D88 /* trichotillomaniaApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = trichotillomaniaApp.xcdatamodel; sourceTree = "<group>"; };
 		0B2EB92F25716CBC00506D88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		0B2EB94425716CBC00506D88 /* trichotillomaniaAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = trichotillomaniaAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B2EB94825716CBC00506D88 /* trichotillomaniaAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trichotillomaniaAppUITests.swift; sourceTree = "<group>"; };
 		0B2EB94A25716CBD00506D88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B2EB95F25718A4800506D88 /* EntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
+		0B2EB9672571A50A00506D88 /* NewEntryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +105,15 @@
 		0B2EB92225716CBB00506D88 /* trichotillomaniaApp */ = {
 			isa = PBXGroup;
 			children = (
+				0B2EB95B257189B800506D88 /* Controller */,
+				0B2EB95A257189B300506D88 /* View */,
+				0B2EB959257189A500506D88 /* Model */,
 				0B2EB92325716CBB00506D88 /* AppDelegate.swift */,
 				0B2EB92525716CBB00506D88 /* SceneDelegate.swift */,
-				0B2EB92725716CBB00506D88 /* ViewController.swift */,
 				0B2EB92925716CBB00506D88 /* Main.storyboard */,
 				0B2EB92F25716CBC00506D88 /* Assets.xcassets */,
 				0B2EB93125716CBC00506D88 /* LaunchScreen.storyboard */,
 				0B2EB93425716CBC00506D88 /* Info.plist */,
-				0B2EB92C25716CBB00506D88 /* trichotillomaniaApp.xcdatamodeld */,
 			);
 			path = trichotillomaniaApp;
 			sourceTree = "<group>";
@@ -129,6 +134,31 @@
 				0B2EB94A25716CBD00506D88 /* Info.plist */,
 			);
 			path = trichotillomaniaAppUITests;
+			sourceTree = "<group>";
+		};
+		0B2EB959257189A500506D88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B2EB92C25716CBB00506D88 /* trichotillomaniaApp.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0B2EB95A257189B300506D88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0B2EB95F25718A4800506D88 /* EntryCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0B2EB95B257189B800506D88 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0B2EB9672571A50A00506D88 /* NewEntryVC.swift */,
+				0B2EB92725716CBB00506D88 /* MainVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,8 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B2EB9682571A50A00506D88 /* NewEntryVC.swift in Sources */,
 				0B2EB92E25716CBB00506D88 /* trichotillomaniaApp.xcdatamodeld in Sources */,
-				0B2EB92825716CBB00506D88 /* ViewController.swift in Sources */,
+				0B2EB96025718A4800506D88 /* EntryCell.swift in Sources */,
+				0B2EB92825716CBB00506D88 /* MainVC.swift in Sources */,
 				0B2EB92425716CBB00506D88 /* AppDelegate.swift in Sources */,
 				0B2EB92625716CBB00506D88 /* SceneDelegate.swift in Sources */,
 			);
