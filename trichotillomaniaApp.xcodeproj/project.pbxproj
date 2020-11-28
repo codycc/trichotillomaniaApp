@@ -18,6 +18,8 @@
 		0B2EB94925716CBC00506D88 /* trichotillomaniaAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2EB94825716CBC00506D88 /* trichotillomaniaAppUITests.swift */; };
 		0B2EB96025718A4800506D88 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2EB95F25718A4800506D88 /* EntryCell.swift */; };
 		0B2EB9682571A50A00506D88 /* NewEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2EB9672571A50A00506D88 /* NewEntryVC.swift */; };
+		0B80727B2572B25700C5A307 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80727A2572B25700C5A307 /* TextCell.swift */; };
+		0B8072802572C29F00C5A307 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80727F2572C29F00C5A307 /* Information.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		0B2EB94A25716CBD00506D88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B2EB95F25718A4800506D88 /* EntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
 		0B2EB9672571A50A00506D88 /* NewEntryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryVC.swift; sourceTree = "<group>"; };
+		0B80727A2572B25700C5A307 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
+		0B80727F2572C29F00C5A307 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				0B2EB92C25716CBB00506D88 /* trichotillomaniaApp.xcdatamodeld */,
+				0B80727F2572C29F00C5A307 /* Information.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				0B2EB95F25718A4800506D88 /* EntryCell.swift */,
+				0B80727A2572B25700C5A307 /* TextCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -293,7 +299,9 @@
 			files = (
 				0B2EB9682571A50A00506D88 /* NewEntryVC.swift in Sources */,
 				0B2EB92E25716CBB00506D88 /* trichotillomaniaApp.xcdatamodeld in Sources */,
+				0B8072802572C29F00C5A307 /* Information.swift in Sources */,
 				0B2EB96025718A4800506D88 /* EntryCell.swift in Sources */,
+				0B80727B2572B25700C5A307 /* TextCell.swift in Sources */,
 				0B2EB92825716CBB00506D88 /* MainVC.swift in Sources */,
 				0B2EB92425716CBB00506D88 /* AppDelegate.swift in Sources */,
 				0B2EB92625716CBB00506D88 /* SceneDelegate.swift in Sources */,

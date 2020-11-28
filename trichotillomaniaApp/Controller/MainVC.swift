@@ -10,6 +10,7 @@ import UIKit
 class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addBtn: UIImageView!
     
     var entry = Entry()
     var entryArray = [Entry]()
@@ -19,6 +20,9 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.addTapped(_:)))
+        addBtn.addGestureRecognizer(tap)
         
         // Do any additional setup after loading the view.
     }
@@ -35,10 +39,11 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         cell.configureCell(entry: entry)
         
-        
-        
-        
         return cell
+    }
+    
+    @objc func addTapped(_ sender: UITapGestureRecognizer? = nil) {
+        self.performSegue(withIdentifier: "goToAddEntryVC", sender: nil)
     }
 
 
