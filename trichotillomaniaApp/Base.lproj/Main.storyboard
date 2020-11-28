@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -237,7 +237,7 @@
             <objects>
                 <viewController id="f5D-g7-8Sx" customClass="NewEntryVC" customModule="trichotillomaniaApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cJf-rg-OgF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="945"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oiA-I1-0fq">
@@ -250,11 +250,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.backward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ALz-Xh-nxk">
-                                        <rect key="frame" x="15" y="42" width="60" height="56.5"/>
+                                        <rect key="frame" x="15" y="49.5" width="45" height="41.5"/>
                                         <color key="tintColor" name="LabelText"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="GM8-Y8-fnR"/>
-                                            <constraint firstAttribute="width" constant="60" id="My2-K8-TYR"/>
+                                            <constraint firstAttribute="height" constant="45" id="GM8-Y8-fnR"/>
+                                            <constraint firstAttribute="width" constant="45" id="My2-K8-TYR"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -267,79 +267,205 @@
                                     <constraint firstAttribute="trailing" secondItem="L44-6D-U7E" secondAttribute="trailing" constant="25" id="cEM-ta-OxS"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7Uw-bd-fQg">
-                                <rect key="frame" x="0.0" y="135" width="414" height="200"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0MN-mW-msr">
+                                <rect key="frame" x="0.0" y="110" width="414" height="801"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Z3-gi-uF9">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
+                                        <color key="backgroundColor" red="0.97820974133678318" green="0.97820974133678318" blue="0.97820974133678318" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="800" id="Tz4-vC-ryG"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="ywL-jA-l9B">
+                                        <rect key="frame" x="25" y="15" width="364" height="781"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intensity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGB-xy-6E3">
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Xxm-3A-bKD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ykf-6e-yNI" customClass="CustomTextField" customModule="trichotillomaniaApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="48" width="364" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="cEU-Fi-8D4"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date/Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voT-En-s6e">
+                                                <rect key="frame" x="0.0" y="106" width="364" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="OQX-wy-X2O"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ybr-jB-4Ma" customClass="CustomTextField" customModule="trichotillomaniaApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="154" width="364" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="To4-jb-uDT"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Situation:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyD-t3-q0p">
+                                                <rect key="frame" x="0.0" y="212" width="364" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="eq7-xf-wGg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pdc-ye-2cJ" customClass="CustomTextField" customModule="trichotillomaniaApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="260" width="364" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Idc-iO-yUi"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How Long? (Minutes):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dop-H7-Ern">
+                                                <rect key="frame" x="0.0" y="318" width="364" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="D2W-r4-3wz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FgA-Rd-Dv2" customClass="CustomTextField" customModule="trichotillomaniaApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="366" width="364" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="yrK-w7-cQq"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# Of Hairs Pulled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOe-pm-SDk">
+                                                <rect key="frame" x="0.0" y="424" width="364" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="gLC-8L-zuK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ma3-px-hcG" customClass="CustomTextField" customModule="trichotillomaniaApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="472" width="364" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="ZaT-jR-leC"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Affected Areas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4D-6M-0Vc">
+                                                <rect key="frame" x="0.0" y="530" width="364" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="w8t-bJ-KnH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h8u-No-eJy" customClass="CustomTextField" customModule="trichotillomaniaApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="578" width="364" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Ekx-n7-TBa"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you digest/rub on lips?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="do7-Oe-XoF">
+                                                <rect key="frame" x="0.0" y="636" width="364" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="hMs-jE-Am2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UH2-mS-8dk">
+                                                <rect key="frame" x="0.0" y="684" width="364" height="32"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <segments>
+                                                    <segment title="Yes"/>
+                                                    <segment title="No"/>
+                                                </segments>
+                                                <color key="selectedSegmentTintColor" systemColor="quaternarySystemFillColor"/>
+                                            </segmentedControl>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOI-kC-8Hm">
+                                                <rect key="frame" x="0.0" y="733" width="364" height="48"/>
+                                                <color key="backgroundColor" name="Sub-Header"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="26"/>
+                                                <state key="normal" title="Submit">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="submitBtnPressed:" destination="f5D-g7-8Sx" eventType="touchUpInside" id="sls-uK-KkJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="HOI-kC-8Hm" secondAttribute="trailing" id="ARm-iR-V4M"/>
+                                            <constraint firstItem="HOI-kC-8Hm" firstAttribute="leading" secondItem="ywL-jA-l9B" secondAttribute="leading" id="Rn6-1w-5SS"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="T1t-hf-0Vy"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Z3-gi-uF9" secondAttribute="trailing" id="9Hv-Kn-15d"/>
+                                    <constraint firstAttribute="trailing" secondItem="ywL-jA-l9B" secondAttribute="trailing" constant="25" id="IyJ-fG-hLs"/>
+                                    <constraint firstAttribute="bottom" secondItem="0Z3-gi-uF9" secondAttribute="bottom" id="Jxt-jQ-lUo"/>
+                                    <constraint firstItem="ywL-jA-l9B" firstAttribute="top" secondItem="0MN-mW-msr" secondAttribute="top" constant="15" id="MJy-js-otd"/>
+                                    <constraint firstItem="0Z3-gi-uF9" firstAttribute="top" secondItem="0MN-mW-msr" secondAttribute="top" id="bJX-Ky-x5r"/>
+                                    <constraint firstItem="ywL-jA-l9B" firstAttribute="leading" secondItem="0MN-mW-msr" secondAttribute="leading" constant="25" id="bbB-XF-JST"/>
+                                    <constraint firstItem="0Z3-gi-uF9" firstAttribute="leading" secondItem="0MN-mW-msr" secondAttribute="leading" id="kMC-97-fsY"/>
+                                    <constraint firstItem="0Z3-gi-uF9" firstAttribute="top" secondItem="0MN-mW-msr" secondAttribute="top" id="q7e-6c-jnE"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="BlL-CX-cNW">
-                                    <size key="itemSize" width="404" height="196"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TextCell" id="0iu-xO-iOb" customClass="TextCell" customModule="trichotillomaniaApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="2" width="404" height="196"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Qfz-nx-8Pf">
-                                            <rect key="frame" x="0.0" y="0.0" width="404" height="196"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vov-aE-qmX">
-                                                    <rect key="frame" x="25" y="15" width="354" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="zQU-II-SZv"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fbd-Kd-x2L">
-                                                    <rect key="frame" x="25" y="55" width="354" height="40"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="fAk-5A-S9w"/>
-                                                    </constraints>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Vov-aE-qmX" firstAttribute="leading" secondItem="Qfz-nx-8Pf" secondAttribute="leading" constant="25" id="2hz-Fs-a9z"/>
-                                                <constraint firstItem="Vov-aE-qmX" firstAttribute="top" secondItem="Qfz-nx-8Pf" secondAttribute="top" constant="15" id="8bw-SC-HSX"/>
-                                                <constraint firstItem="fbd-Kd-x2L" firstAttribute="top" secondItem="Vov-aE-qmX" secondAttribute="bottom" constant="10" id="Evp-jF-Z6P"/>
-                                                <constraint firstAttribute="trailing" secondItem="fbd-Kd-x2L" secondAttribute="trailing" constant="25" id="ncM-4Q-1N7"/>
-                                                <constraint firstItem="fbd-Kd-x2L" firstAttribute="leading" secondItem="Qfz-nx-8Pf" secondAttribute="leading" constant="25" id="qnK-9k-LEt"/>
-                                                <constraint firstAttribute="trailing" secondItem="Vov-aE-qmX" secondAttribute="trailing" constant="25" id="xvo-XD-eHp"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="404" height="196"/>
-                                        <connections>
-                                            <outlet property="entryLbl" destination="Vov-aE-qmX" id="C5R-cH-FyR"/>
-                                            <outlet property="textField" destination="fbd-Kd-x2L" id="zzz-XW-Hht"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fUr-R2-YwF"/>
                         <color key="backgroundColor" red="0.97748054425740982" green="0.97748054425740982" blue="0.97748054425740982" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="fUr-R2-YwF" firstAttribute="trailing" secondItem="oiA-I1-0fq" secondAttribute="trailing" id="ESa-MG-U5e"/>
                             <constraint firstItem="oiA-I1-0fq" firstAttribute="leading" secondItem="cJf-rg-OgF" secondAttribute="leading" id="Gc7-u5-OUW"/>
-                            <constraint firstItem="fUr-R2-YwF" firstAttribute="trailing" secondItem="7Uw-bd-fQg" secondAttribute="trailing" id="PQ3-gp-SeY"/>
-                            <constraint firstItem="7Uw-bd-fQg" firstAttribute="top" secondItem="oiA-I1-0fq" secondAttribute="bottom" constant="25" id="ZMh-bh-KY7"/>
+                            <constraint firstItem="fUr-R2-YwF" firstAttribute="bottom" secondItem="0MN-mW-msr" secondAttribute="bottom" id="OFe-fJ-DGB"/>
                             <constraint firstItem="oiA-I1-0fq" firstAttribute="top" secondItem="cJf-rg-OgF" secondAttribute="top" id="bcj-vX-VXi"/>
-                            <constraint firstItem="7Uw-bd-fQg" firstAttribute="leading" secondItem="fUr-R2-YwF" secondAttribute="leading" id="yEI-8h-3Pf"/>
+                            <constraint firstItem="0MN-mW-msr" firstAttribute="top" secondItem="oiA-I1-0fq" secondAttribute="bottom" id="eGU-AW-OFM"/>
+                            <constraint firstItem="0MN-mW-msr" firstAttribute="leading" secondItem="fUr-R2-YwF" secondAttribute="leading" id="l4R-kM-5K3"/>
+                            <constraint firstItem="fUr-R2-YwF" firstAttribute="trailing" secondItem="0MN-mW-msr" secondAttribute="trailing" id="yMd-B4-FSR"/>
+                            <constraint firstItem="0Z3-gi-uF9" firstAttribute="width" secondItem="cJf-rg-OgF" secondAttribute="width" id="yiS-H9-h3U"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7Aq-uj-ddF"/>
+                    <size key="freeformSize" width="414" height="999"/>
                     <connections>
+                        <outlet property="affectedAreasTextField" destination="h8u-No-eJy" id="0Ek-UK-9v5"/>
                         <outlet property="backBtn" destination="ALz-Xh-nxk" id="Pax-JE-hUU"/>
-                        <outlet property="collectionView" destination="7Uw-bd-fQg" id="J0c-ra-DDr"/>
+                        <outlet property="dateTimeTextField" destination="Ybr-jB-4Ma" id="EWN-Oc-mIZ"/>
+                        <outlet property="didYouDiegestControl" destination="UH2-mS-8dk" id="mo3-jC-614"/>
+                        <outlet property="howLongTextField" destination="FgA-Rd-Dv2" id="vUA-ix-Mkc"/>
+                        <outlet property="intensityTextField" destination="ykf-6e-yNI" id="G7Y-fn-7EA"/>
+                        <outlet property="numberOfHairsTextField" destination="Ma3-px-hcG" id="VIh-Do-sde"/>
+                        <outlet property="situationTextField" destination="Pdc-ye-2cJ" id="RWH-j0-k81"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="71B-Qq-jm8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -365,5 +491,8 @@
         <namedColor name="Sub-Header">
             <color red="0.65098039215686276" green="0.86274509803921573" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="quaternarySystemFillColor">
+            <color red="0.45490196078431372" green="0.45490196078431372" blue="0.50196078431372548" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

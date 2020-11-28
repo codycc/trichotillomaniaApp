@@ -10,4 +10,5 @@ import Foundation
 class Information {
     var placeholder: String = ""
     var label: String = ""
+    var textFieldEnabled = true 
 }

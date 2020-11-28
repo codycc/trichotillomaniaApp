@@ -1,0 +1,6 @@
+framework module Pods_trichotillomaniaApp_trichotillomaniaAppUITests {
+  umbrella header "Pods-trichotillomaniaApp-trichotillomaniaAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

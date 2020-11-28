@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,8 +18,11 @@
 		0B2EB94925716CBC00506D88 /* trichotillomaniaAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2EB94825716CBC00506D88 /* trichotillomaniaAppUITests.swift */; };
 		0B2EB96025718A4800506D88 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2EB95F25718A4800506D88 /* EntryCell.swift */; };
 		0B2EB9682571A50A00506D88 /* NewEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2EB9672571A50A00506D88 /* NewEntryVC.swift */; };
-		0B80727B2572B25700C5A307 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80727A2572B25700C5A307 /* TextCell.swift */; };
 		0B8072802572C29F00C5A307 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80727F2572C29F00C5A307 /* Information.swift */; };
+		0B84F7682573061100EAB209 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B84F7672573061100EAB209 /* CustomTextField.swift */; };
+		22E75A6B1D661DF5A75E3E26 /* Pods_trichotillomaniaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 474F80FD0B71DD3D39B2EAB3 /* Pods_trichotillomaniaApp.framework */; };
+		439D98DA98905D8316C7699C /* Pods_trichotillomaniaApp_trichotillomaniaAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA7A392A008010B912A9919 /* Pods_trichotillomaniaApp_trichotillomaniaAppUITests.framework */; };
+		8BD307A5287BD7719BC2954C /* Pods_trichotillomaniaAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F16E2C1C64E4BC21747A20 /* Pods_trichotillomaniaAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +60,17 @@
 		0B2EB94A25716CBD00506D88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B2EB95F25718A4800506D88 /* EntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
 		0B2EB9672571A50A00506D88 /* NewEntryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryVC.swift; sourceTree = "<group>"; };
-		0B80727A2572B25700C5A307 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		0B80727F2572C29F00C5A307 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
+		0B84F7672573061100EAB209 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		2C3CFCCDA58296FE690FF31F /* Pods-trichotillomaniaAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trichotillomaniaAppTests.release.xcconfig"; path = "Target Support Files/Pods-trichotillomaniaAppTests/Pods-trichotillomaniaAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		394C445FBA260CDB4E4E8333 /* Pods-trichotillomaniaAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trichotillomaniaAppTests.debug.xcconfig"; path = "Target Support Files/Pods-trichotillomaniaAppTests/Pods-trichotillomaniaAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		474F80FD0B71DD3D39B2EAB3 /* Pods_trichotillomaniaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trichotillomaniaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AA7A392A008010B912A9919 /* Pods_trichotillomaniaApp_trichotillomaniaAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trichotillomaniaApp_trichotillomaniaAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63C5F4D397D930DFD4D37E87 /* Pods-trichotillomaniaApp-trichotillomaniaAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trichotillomaniaApp-trichotillomaniaAppUITests.release.xcconfig"; path = "Target Support Files/Pods-trichotillomaniaApp-trichotillomaniaAppUITests/Pods-trichotillomaniaApp-trichotillomaniaAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		72F16E2C1C64E4BC21747A20 /* Pods_trichotillomaniaAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trichotillomaniaAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BFC928C1D8AB01FBEA6D123 /* Pods-trichotillomaniaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trichotillomaniaApp.release.xcconfig"; path = "Target Support Files/Pods-trichotillomaniaApp/Pods-trichotillomaniaApp.release.xcconfig"; sourceTree = "<group>"; };
+		CDAFD3ECF583DA54925FA9C9 /* Pods-trichotillomaniaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trichotillomaniaApp.debug.xcconfig"; path = "Target Support Files/Pods-trichotillomaniaApp/Pods-trichotillomaniaApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E84B23E7545A3EA0A378F7DB /* Pods-trichotillomaniaApp-trichotillomaniaAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trichotillomaniaApp-trichotillomaniaAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-trichotillomaniaApp-trichotillomaniaAppUITests/Pods-trichotillomaniaApp-trichotillomaniaAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22E75A6B1D661DF5A75E3E26 /* Pods_trichotillomaniaApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BD307A5287BD7719BC2954C /* Pods_trichotillomaniaAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				439D98DA98905D8316C7699C /* Pods_trichotillomaniaApp_trichotillomaniaAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +108,8 @@
 				0B2EB93C25716CBC00506D88 /* trichotillomaniaAppTests */,
 				0B2EB94725716CBC00506D88 /* trichotillomaniaAppUITests */,
 				0B2EB92125716CBB00506D88 /* Products */,
+				33DE3D61930D92EA6AD1069D /* Pods */,
+				15081F43DE8B729A8F469CCD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,7 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				0B2EB95F25718A4800506D88 /* EntryCell.swift */,
-				0B80727A2572B25700C5A307 /* TextCell.swift */,
+				0B84F7672573061100EAB209 /* CustomTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +184,29 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		15081F43DE8B729A8F469CCD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				474F80FD0B71DD3D39B2EAB3 /* Pods_trichotillomaniaApp.framework */,
+				5AA7A392A008010B912A9919 /* Pods_trichotillomaniaApp_trichotillomaniaAppUITests.framework */,
+				72F16E2C1C64E4BC21747A20 /* Pods_trichotillomaniaAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		33DE3D61930D92EA6AD1069D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CDAFD3ECF583DA54925FA9C9 /* Pods-trichotillomaniaApp.debug.xcconfig */,
+				9BFC928C1D8AB01FBEA6D123 /* Pods-trichotillomaniaApp.release.xcconfig */,
+				E84B23E7545A3EA0A378F7DB /* Pods-trichotillomaniaApp-trichotillomaniaAppUITests.debug.xcconfig */,
+				63C5F4D397D930DFD4D37E87 /* Pods-trichotillomaniaApp-trichotillomaniaAppUITests.release.xcconfig */,
+				394C445FBA260CDB4E4E8333 /* Pods-trichotillomaniaAppTests.debug.xcconfig */,
+				2C3CFCCDA58296FE690FF31F /* Pods-trichotillomaniaAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B2EB94D25716CBD00506D88 /* Build configuration list for PBXNativeTarget "trichotillomaniaApp" */;
 			buildPhases = (
+				D1A3B152795CC0047BB1955A /* [CP] Check Pods Manifest.lock */,
 				0B2EB91C25716CBB00506D88 /* Sources */,
 				0B2EB91D25716CBB00506D88 /* Frameworks */,
 				0B2EB91E25716CBB00506D88 /* Resources */,
+				5B97AECAFF05CA88D1047D31 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,6 +233,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B2EB95025716CBD00506D88 /* Build configuration list for PBXNativeTarget "trichotillomaniaAppTests" */;
 			buildPhases = (
+				964751894110E6FC290675F1 /* [CP] Check Pods Manifest.lock */,
 				0B2EB93525716CBC00506D88 /* Sources */,
 				0B2EB93625716CBC00506D88 /* Frameworks */,
 				0B2EB93725716CBC00506D88 /* Resources */,
@@ -209,9 +252,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B2EB95325716CBD00506D88 /* Build configuration list for PBXNativeTarget "trichotillomaniaAppUITests" */;
 			buildPhases = (
+				05D2824F053DD254F2A02C46 /* [CP] Check Pods Manifest.lock */,
 				0B2EB94025716CBC00506D88 /* Sources */,
 				0B2EB94125716CBC00506D88 /* Frameworks */,
 				0B2EB94225716CBC00506D88 /* Resources */,
+				2B7CC9EFE5F6A36581C5E6C9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -292,6 +337,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		05D2824F053DD254F2A02C46 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-trichotillomaniaApp-trichotillomaniaAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B7CC9EFE5F6A36581C5E6C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-trichotillomaniaApp-trichotillomaniaAppUITests/Pods-trichotillomaniaApp-trichotillomaniaAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-trichotillomaniaApp-trichotillomaniaAppUITests/Pods-trichotillomaniaApp-trichotillomaniaAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-trichotillomaniaApp-trichotillomaniaAppUITests/Pods-trichotillomaniaApp-trichotillomaniaAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B97AECAFF05CA88D1047D31 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-trichotillomaniaApp/Pods-trichotillomaniaApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-trichotillomaniaApp/Pods-trichotillomaniaApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-trichotillomaniaApp/Pods-trichotillomaniaApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		964751894110E6FC290675F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-trichotillomaniaAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1A3B152795CC0047BB1955A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-trichotillomaniaApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0B2EB91C25716CBB00506D88 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -301,7 +449,7 @@
 				0B2EB92E25716CBB00506D88 /* trichotillomaniaApp.xcdatamodeld in Sources */,
 				0B8072802572C29F00C5A307 /* Information.swift in Sources */,
 				0B2EB96025718A4800506D88 /* EntryCell.swift in Sources */,
-				0B80727B2572B25700C5A307 /* TextCell.swift in Sources */,
+				0B84F7682573061100EAB209 /* CustomTextField.swift in Sources */,
 				0B2EB92825716CBB00506D88 /* MainVC.swift in Sources */,
 				0B2EB92425716CBB00506D88 /* AppDelegate.swift in Sources */,
 				0B2EB92625716CBB00506D88 /* SceneDelegate.swift in Sources */,
@@ -477,6 +625,7 @@
 		};
 		0B2EB94E25716CBD00506D88 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDAFD3ECF583DA54925FA9C9 /* Pods-trichotillomaniaApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -496,6 +645,7 @@
 		};
 		0B2EB94F25716CBD00506D88 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BFC928C1D8AB01FBEA6D123 /* Pods-trichotillomaniaApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -515,6 +665,7 @@
 		};
 		0B2EB95125716CBD00506D88 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 394C445FBA260CDB4E4E8333 /* Pods-trichotillomaniaAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -537,6 +688,7 @@
 		};
 		0B2EB95225716CBD00506D88 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C3CFCCDA58296FE690FF31F /* Pods-trichotillomaniaAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -559,6 +711,7 @@
 		};
 		0B2EB95425716CBD00506D88 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E84B23E7545A3EA0A378F7DB /* Pods-trichotillomaniaApp-trichotillomaniaAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -579,6 +732,7 @@
 		};
 		0B2EB95525716CBD00506D88 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63C5F4D397D930DFD4D37E87 /* Pods-trichotillomaniaApp-trichotillomaniaAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
