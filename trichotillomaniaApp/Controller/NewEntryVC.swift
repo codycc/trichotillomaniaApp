@@ -65,13 +65,16 @@ class NewEntryVC: UIViewController,UITextFieldDelegate{
     
     func createItem() {
         var newEntry = Entry(context: context)
-        
-        print(newEntry.situation!)
+        newEntry.situation = situationTextField.text!
+        print(newEntry.situation)
+        saveItem()
     }
     
     func saveItem() {
         do {
             try context.save()
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadTable"), object: nil)
+            self.dismiss(animated: true, completion: nil)
         } catch {
            print("error saving context")
         }

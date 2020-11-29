@@ -13,6 +13,7 @@ class EntryCell: UITableViewCell {
     @IBOutlet weak var lengthOfTimeLbl: UILabel!
     @IBOutlet weak var numberOfHairsLabel: UILabel!
     @IBOutlet weak var areaLbl: UILabel!
+    @IBOutlet weak var dateLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,7 +22,7 @@ class EntryCell: UITableViewCell {
     
     func configureCell(entry: Entry) {
         situationLabel.text = entry.situation
-        lengthOfTimeLbl.text = String(entry.lengthOfTime)
+        
     }
     
    
