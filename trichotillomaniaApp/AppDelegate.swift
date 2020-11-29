@@ -15,6 +15,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        
+        if launchedBefore {
+            
+        } else {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            
+            let computer = NSEntityDescription.insertNewObject(forEntityName: "Situation", into: context)
+            let homework = NSEntityDescription.insertNewObject(forEntityName: "Situation", into: context)
+            let driving = NSEntityDescription.insertNewObject(forEntityName: "Situation", into: context)
+            let grooming = NSEntityDescription.insertNewObject(forEntityName: "Situation", into: context)
+            let bathroom = NSEntityDescription.insertNewObject(forEntityName: "Situation", into: context)
+            let inBed = NSEntityDescription.insertNewObject(forEntityName: "Situation", into: context)
+            let watchingTv = NSEntityDescription.insertNewObject(forEntityName: "Situation", into: context)
+            let inFrontOfMirror = NSEntityDescription.insertNewObject(forEntityName: "Situation", into: context)
+            let inPublic = NSEntityDescription.insertNewObject(forEntityName: "Situation", into: context)
+       
+            computer.setValue("Computer", forKey: "place")
+            homework.setValue("Homework", forKey: "place")
+            driving.setValue("Driving", forKey: "place")
+            grooming.setValue("Grooming", forKey: "place")
+            bathroom.setValue("Bathroom", forKey: "place")
+            inBed.setValue("In Bed", forKey: "place")
+            watchingTv.setValue("Watching TV", forKey: "place")
+            inFrontOfMirror.setValue("In Front Of Mirror", forKey: "place")
+            inPublic.setValue("In Public", forKey: "place")
+            
+            do {
+                try context.save()
+            } catch {
+                
+            }
+        }
+        
         // Override point for customization after application launch.
         IQKeyboardManager.shared.enable = true
         return true

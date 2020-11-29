@@ -22,11 +22,14 @@ class NewEntryVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, U
     @IBOutlet weak var intensityControl: UISlider!
     @IBOutlet weak var backBtn: UIImageView!
     
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let requestSituation = NSFetchRequest<NSFetchRequestResult>(entityName: "Situation")
     var timeSince1970 = 0.0
     let situationPicker = UIPickerView()
-    var situations = ["chair","home"]
+    let affectedAreaPicker = UIPickerView()
+    var situations = [Situation]()
+    var affectedAreas = ["Eyebrows","Eyelashes","Scalp","Legs","Arms", "Pubic Area", "Nose", "Chest","Hands","Face","Toe","Foot","Underarm","Thigh","Stomach","Ear"]
     var selectedSituation: String = "hello"
     private var datePicker: UIDatePicker?
     
@@ -45,7 +48,7 @@ class NewEntryVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, U
         createDatePicker()
         createSituationPicker()
         addPlaceholders()
-       // fetchSituationData()
+        fetchSituationData()
         
     }
     
@@ -62,20 +65,21 @@ class NewEntryVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, U
         situationTextField.inputView = situationPicker
     }
     
-//    func fetchSituationData() {
-//        situations = []
-//        do {
-//            let results = try context.fetch(requestSituation)
-//            if results.count > 0 {
-//                for result in results {
-//                    situations.append(result as! Situation)
-//                }
-//            }
-//           // selectedSituation = situations[0].place!
-//        } catch {
-//            // handle error
-//        }
-//    }
+    
+    func fetchSituationData() {
+        situations = []
+        do {
+            let results = try context.fetch(requestSituation)
+            if results.count > 0 {
+                for result in results {
+                    situations.append(result as! Situation)
+                }
+            }
+           // selectedSituation = situations[0].place!
+        } catch {
+            // handle error
+        }
+    }
     
     @objc func dateDoneClicked(datePicker: UIDatePicker) {
         let dateFormatter = DateFormatter()
@@ -113,7 +117,10 @@ class NewEntryVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, U
     func createItem() {
         var newEntry = Entry(context: context)
         newEntry.intensity = Int32(intensityControl.value)
+        newEntry.dateTime = timeSince1970
         newEntry.situation = situationTextField.text!
+        newEntry.howLong = Int32(howLongTextField.text!)!
+        newEntry.numberOfHairsPulled = Int32(numberOfHairsTextField.text!)!
         print(Int32(intensityControl.value))
         saveItem()
     }
@@ -133,16 +140,39 @@ class NewEntryVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, U
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return situations[row]
+        
+        if pickerView == situationPicker {
+            return situations[row].place
+        }else if pickerView == affectedAreaPicker {
+            
+        }
+        return ""
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedSituation = situations[row]
-        situationTextField.text = selectedSituation
+        
+        
+        if pickerView == situationPicker {
+            selectedSituation = situations[row].place!
+            situationTextField.text = selectedSituation
+        }else if pickerView == affectedAreaPicker {
+            
+        } else {
+            selectedSituation = ""
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return situations.count
+        
+        
+        if pickerView == situationPicker {
+            return situations.count
+        } else if pickerView == affectedAreaPicker {
+            return affectedAreas.count
+        } else {
+            return 0
+        }
+        
     }
     
     
@@ -153,6 +183,30 @@ class NewEntryVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, U
     
     @IBAction func submitBtnPressed(_ sender: Any) {
         createItem()
+    }
+    @IBAction func addNewSituationPressed(_ sender: Any) {
+        var textField = UITextField()
+        let alert = UIAlertController(title: "Add new Situation", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Add Situation", style: .default) { [self] (action) in
+            //what will happen once user clicks add
+            self.situationTextField.text = textField.text
+            
+            //create core data object
+            let newSituation = Situation(context: context)
+            newSituation.place = textField.text
+            do {
+                try context.save()
+                fetchSituationData()
+            } catch {
+                
+            }
+        }
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Workdesk"
+            textField = alertTextField
+        }
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
     
     
