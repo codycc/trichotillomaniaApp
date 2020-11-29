@@ -14,6 +14,9 @@ class EntryCell: UITableViewCell {
     @IBOutlet weak var numberOfHairsLabel: UILabel!
     @IBOutlet weak var areaLbl: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
+    @IBOutlet weak var intensityLbl: UILabel!
+    @IBOutlet weak var didYouDigestLbl: UILabel!
+    @IBOutlet weak var timeLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,6 +25,30 @@ class EntryCell: UITableViewCell {
     
     func configureCell(entry: Entry) {
         situationLabel.text = entry.situation
+        lengthOfTimeLbl.text = String("\(entry.howLong) minutes")
+        numberOfHairsLabel.text = String(entry.numberOfHairsPulled)
+        areaLbl.text = entry.areaAffected
+        if entry.didYouDigest == true {
+            didYouDigestLbl.text = "Yes"
+        } else {
+            didYouDigestLbl.text = "No"
+        }
+        
+        
+        let date = NSDate(timeIntervalSince1970: entry.dateTime)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "h:mm a"
+        let finalDate = formatter.string(from: date as Date)
+        let finalTime = timeFormatter.string(from: date as Date)
+        timeLbl.text = String(describing: finalTime)
+        dateLbl.text = String(describing: finalDate)
+        
+        
+        
+        intensityLbl.text = String(entry.intensity)
+        
         
     }
     

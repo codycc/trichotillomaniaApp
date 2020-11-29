@@ -14,7 +14,7 @@ class CustomView: UIView {
         //Color
         layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3 ).cgColor
         // Opacity
-        layer.shadowOpacity = 0.4
+        layer.shadowOpacity = 0.5
         // How far is spreads / blurs out
         layer.shadowRadius = 5.0
         

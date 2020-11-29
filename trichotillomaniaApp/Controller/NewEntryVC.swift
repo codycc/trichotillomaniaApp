@@ -22,6 +22,7 @@ class NewEntryVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, U
     @IBOutlet weak var intensityControl: UISlider!
     @IBOutlet weak var backBtn: UIImageView!
     
+    @IBOutlet weak var submitBtn: UIButton!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let requestSituation = NSFetchRequest<NSFetchRequestResult>(entityName: "Situation")
@@ -30,7 +31,8 @@ class NewEntryVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, U
     let affectedAreaPicker = UIPickerView()
     var situations = [Situation]()
     var affectedAreas = ["Eyebrows","Eyelashes","Scalp","Legs","Arms", "Pubic Area", "Nose", "Chest","Hands","Face","Toe","Foot","Underarm","Thigh","Stomach","Ear"]
-    var selectedSituation: String = "hello"
+    var selectedSituation: String = ""
+    var selectedArea: String = ""
     private var datePicker: UIDatePicker?
     
  
@@ -44,11 +46,19 @@ class NewEntryVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, U
         view.addGestureRecognizer(tap)
         backBtn.addGestureRecognizer(backTap)
         
+        dateTimeTextField.delegate = self
+        situationTextField.delegate = self
+        howLongTextField.delegate = self
+        numberOfHairsTextField.delegate = self
+        affectedAreasTextField.delegate = self
+        
         
         createDatePicker()
         createSituationPicker()
+        createAffectedAreasPicker()
         addPlaceholders()
         fetchSituationData()
+        checkIfTextFieldsEmpty()   
         
     }
     
@@ -63,6 +73,11 @@ class NewEntryVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, U
     func createSituationPicker() {
         situationPicker.delegate = self
         situationTextField.inputView = situationPicker
+    }
+    
+    func createAffectedAreasPicker() {
+        affectedAreaPicker.delegate = self
+        affectedAreasTextField.inputView = affectedAreaPicker
     }
     
     
@@ -86,9 +101,6 @@ class NewEntryVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, U
         dateFormatter.dateFormat = "MM/dd/yyyy HH:mm"
         dateTimeTextField.text = dateFormatter.string(from: datePicker.date)
         timeSince1970 = self.datePicker!.date.timeIntervalSince1970
-        print(timeSince1970)
-//        let date = NSDate(timeIntervalSince1970: timeSince1970)
-//        print(date)
     }
     
     func addPlaceholders() {
@@ -102,6 +114,19 @@ class NewEntryVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, U
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.view.frame.width, height: 200)
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+       checkIfTextFieldsEmpty()
+    }
+    
+    func checkIfTextFieldsEmpty() {
+        if self.dateTimeTextField.text!.isEmpty  || self.situationTextField.text!.isEmpty  || self.howLongTextField.text!.isEmpty  || numberOfHairsTextField.text!.isEmpty  || affectedAreasTextField.text!.isEmpty  {
+            self.submitBtn.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+            self.submitBtn.isEnabled = false
+        } else {
+            self.submitBtn.backgroundColor = #colorLiteral(red: 0.6510000229, green: 0.8629999757, blue: 0.9369999766, alpha: 1)
+            self.submitBtn.isEnabled = true
+        }
     }
     
     
@@ -121,6 +146,15 @@ class NewEntryVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, U
         newEntry.situation = situationTextField.text!
         newEntry.howLong = Int32(howLongTextField.text!)!
         newEntry.numberOfHairsPulled = Int32(numberOfHairsTextField.text!)!
+        newEntry.areaAffected = affectedAreasTextField.text
+        switch didYouDiegestControl.selectedSegmentIndex {
+        case 0:
+            newEntry.didYouDigest = true
+        case 1:
+            newEntry.didYouDigest = false
+        default:
+            newEntry.didYouDigest = false 
+        }
         print(Int32(intensityControl.value))
         saveItem()
     }
@@ -144,7 +178,7 @@ class NewEntryVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, U
         if pickerView == situationPicker {
             return situations[row].place
         }else if pickerView == affectedAreaPicker {
-            
+            return affectedAreas[row]
         }
         return ""
     }
@@ -156,7 +190,8 @@ class NewEntryVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, U
             selectedSituation = situations[row].place!
             situationTextField.text = selectedSituation
         }else if pickerView == affectedAreaPicker {
-            
+            selectedArea = affectedAreas[row]
+            affectedAreasTextField.text = selectedArea
         } else {
             selectedSituation = ""
         }
@@ -184,6 +219,7 @@ class NewEntryVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, U
     @IBAction func submitBtnPressed(_ sender: Any) {
         createItem()
     }
+    
     @IBAction func addNewSituationPressed(_ sender: Any) {
         var textField = UITextField()
         let alert = UIAlertController(title: "Add new Situation", message: "", preferredStyle: .alert)
