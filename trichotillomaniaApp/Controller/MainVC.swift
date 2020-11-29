@@ -23,7 +23,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
+        tableView.backgroundColor = #colorLiteral(red: 0.6510000229, green: 0.8629999757, blue: 0.9369999766, alpha: 1)
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.addTapped(_:)))
         addBtn.addGestureRecognizer(tap)
         

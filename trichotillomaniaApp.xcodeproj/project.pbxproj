@@ -18,6 +18,7 @@
 		0B2EB94925716CBC00506D88 /* trichotillomaniaAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2EB94825716CBC00506D88 /* trichotillomaniaAppUITests.swift */; };
 		0B2EB96025718A4800506D88 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2EB95F25718A4800506D88 /* EntryCell.swift */; };
 		0B2EB9682571A50A00506D88 /* NewEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2EB9672571A50A00506D88 /* NewEntryVC.swift */; };
+		0B607FB42573D8FA0089ABC3 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B607FB32573D8FA0089ABC3 /* CustomView.swift */; };
 		0B8072802572C29F00C5A307 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B80727F2572C29F00C5A307 /* Information.swift */; };
 		0B84F7682573061100EAB209 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B84F7672573061100EAB209 /* CustomTextField.swift */; };
 		22E75A6B1D661DF5A75E3E26 /* Pods_trichotillomaniaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 474F80FD0B71DD3D39B2EAB3 /* Pods_trichotillomaniaApp.framework */; };
@@ -60,6 +61,7 @@
 		0B2EB94A25716CBD00506D88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B2EB95F25718A4800506D88 /* EntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
 		0B2EB9672571A50A00506D88 /* NewEntryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryVC.swift; sourceTree = "<group>"; };
+		0B607FB32573D8FA0089ABC3 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		0B80727F2572C29F00C5A307 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		0B84F7672573061100EAB209 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		2C3CFCCDA58296FE690FF31F /* Pods-trichotillomaniaAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trichotillomaniaAppTests.release.xcconfig"; path = "Target Support Files/Pods-trichotillomaniaAppTests/Pods-trichotillomaniaAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			children = (
 				0B2EB95F25718A4800506D88 /* EntryCell.swift */,
 				0B84F7672573061100EAB209 /* CustomTextField.swift */,
+				0B607FB32573D8FA0089ABC3 /* CustomView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				0B2EB9682571A50A00506D88 /* NewEntryVC.swift in Sources */,
 				0B2EB92E25716CBB00506D88 /* trichotillomaniaApp.xcdatamodeld in Sources */,
 				0B8072802572C29F00C5A307 /* Information.swift in Sources */,
+				0B607FB42573D8FA0089ABC3 /* CustomView.swift in Sources */,
 				0B2EB96025718A4800506D88 /* EntryCell.swift in Sources */,
 				0B84F7682573061100EAB209 /* CustomTextField.swift in Sources */,
 				0B2EB92825716CBB00506D88 /* MainVC.swift in Sources */,
