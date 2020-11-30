@@ -223,6 +223,7 @@ class NewEntryVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, U
     @IBAction func addNewSituationPressed(_ sender: Any) {
         var textField = UITextField()
         let alert = UIAlertController(title: "Add new Situation", message: "", preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         let action = UIAlertAction(title: "Add Situation", style: .default) { [self] (action) in
             //what will happen once user clicks add
             self.situationTextField.text = textField.text
@@ -242,6 +243,7 @@ class NewEntryVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, U
             textField = alertTextField
         }
         alert.addAction(action)
+        alert.addAction(cancel)
         present(alert, animated: true, completion: nil)
     }
     

@@ -9,11 +9,18 @@
         <attribute name="numberOfHairsPulled" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="situation" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="Goal" representedClassName="Goal" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="isUnlocked" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="Situation" representedClassName="Situation" syncable="YES" codeGenerationType="class">
         <attribute name="place" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="Entry" positionX="-54" positionY="-9" width="128" height="134"/>
+        <element name="Goal" positionX="-54" positionY="45" width="128" height="89"/>
         <element name="Situation" positionX="-54" positionY="36" width="128" height="44"/>
     </elements>
 </model>

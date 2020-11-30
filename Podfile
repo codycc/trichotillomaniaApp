@@ -8,6 +8,7 @@ target 'trichotillomaniaApp' do
   # Pods for trichotillomaniaApp
 
   pod 'IQKeyboardManagerSwift'
+  pod 'Charts'
 
   target 'trichotillomaniaAppTests' do
     inherit! :search_paths

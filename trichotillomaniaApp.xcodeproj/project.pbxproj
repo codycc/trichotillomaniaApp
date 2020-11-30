@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B26D6ED257530AB0076D781 /* ReflectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B26D6EC257530AB0076D781 /* ReflectVC.swift */; };
 		0B2EB92425716CBB00506D88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2EB92325716CBB00506D88 /* AppDelegate.swift */; };
 		0B2EB92625716CBB00506D88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2EB92525716CBB00506D88 /* SceneDelegate.swift */; };
 		0B2EB92825716CBB00506D88 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2EB92725716CBB00506D88 /* MainVC.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B26D6EC257530AB0076D781 /* ReflectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectVC.swift; sourceTree = "<group>"; };
 		0B2EB92025716CBB00506D88 /* trichotillomaniaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trichotillomaniaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B2EB92325716CBB00506D88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B2EB92525716CBB00506D88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,7 +135,6 @@
 				0B2EB959257189A500506D88 /* Model */,
 				0B2EB92325716CBB00506D88 /* AppDelegate.swift */,
 				0B2EB92525716CBB00506D88 /* SceneDelegate.swift */,
-				0B2EB92925716CBB00506D88 /* Main.storyboard */,
 				0B2EB92F25716CBC00506D88 /* Assets.xcassets */,
 				0B2EB93125716CBC00506D88 /* LaunchScreen.storyboard */,
 				0B2EB93425716CBC00506D88 /* Info.plist */,
@@ -174,6 +175,7 @@
 				0B2EB95F25718A4800506D88 /* EntryCell.swift */,
 				0B84F7672573061100EAB209 /* CustomTextField.swift */,
 				0B607FB32573D8FA0089ABC3 /* CustomView.swift */,
+				0B2EB92925716CBB00506D88 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,6 +185,7 @@
 			children = (
 				0B2EB9672571A50A00506D88 /* NewEntryVC.swift */,
 				0B2EB92725716CBB00506D88 /* MainVC.swift */,
+				0B26D6EC257530AB0076D781 /* ReflectVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B26D6ED257530AB0076D781 /* ReflectVC.swift in Sources */,
 				0B2EB9682571A50A00506D88 /* NewEntryVC.swift in Sources */,
 				0B2EB92E25716CBB00506D88 /* trichotillomaniaApp.xcdatamodeld in Sources */,
 				0B8072802572C29F00C5A307 /* Information.swift in Sources */,

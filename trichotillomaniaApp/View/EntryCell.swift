@@ -37,7 +37,7 @@ class EntryCell: UITableViewCell {
         
         let date = NSDate(timeIntervalSince1970: entry.dateTime)
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
+        formatter.dateFormat = "MM-dd-yyyy"
         let timeFormatter = DateFormatter()
         timeFormatter.dateFormat = "h:mm a"
         let finalDate = formatter.string(from: date as Date)
