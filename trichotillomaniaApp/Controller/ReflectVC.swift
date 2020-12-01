@@ -65,10 +65,10 @@ class ReflectVC: UIViewController  {
             dataLbl.text = "Area Affected"
         case 2:
             showLength()
-            dataLbl.text = "Length(Minutes"
+            dataLbl.text = "Length(Minutes)"
         case 3:
             showDigested()
-            dataLbl.text = "Did You Digest"
+            dataLbl.text = "Did You Digest?"
         case 4:
             showNumOfHairs()
             dataLbl.text = "Number Of Hairs"

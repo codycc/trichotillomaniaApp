@@ -9,6 +9,7 @@ target 'trichotillomaniaApp' do
 
   pod 'IQKeyboardManagerSwift'
   pod 'Charts'
+  pod 'CSV.swift', '~> 2.4.3'
 
   target 'trichotillomaniaAppTests' do
     inherit! :search_paths

@@ -7,6 +7,8 @@
 
 import UIKit
 import CoreData
+import CSV
+
 
 class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -16,11 +18,15 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var sortBtn: UIImageView!
     @IBOutlet weak var sortLbl: UILabel!
     
+    @IBOutlet weak var moreBtn: UIImageView!
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let requestEntry = NSFetchRequest<NSFetchRequestResult>(entityName: "Entry")
-    
+    var employeeArray:[Dictionary<String, AnyObject>] =  Array()
+
     var entriesArray = [Entry]()
     var currentSortId = 1
+  
     
     
     override func viewDidLoad() {
@@ -35,12 +41,76 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let sortTap = UITapGestureRecognizer(target: self, action: #selector(self.sortTapped(_:)))
         sortBtn.addGestureRecognizer(sortTap)
         
+        let moreTap = UITapGestureRecognizer(target: self, action: #selector(self.moreTapped(_:)))
+        moreBtn.addGestureRecognizer(moreTap)
+        
+        
         NotificationCenter.default.addObserver(self, selector: #selector(reloadTable), name: NSNotification.Name(rawValue: "reloadTable"), object: nil)
         
         grabEntries()
         sortDate()
+     
+      
+       
+        
         // Do any additional setup after loading the view.
     }
+    
+    func shareFiles() {
+        
+    }
+    
+    func createCSV() {
+        let fileName =  "trichJournalLog1.csv"
+
+        var csvText = "Date,# Of Hairs, length(minutes), Digested?, Area, Situation\n"
+        
+        for entry in entriesArray {
+            let date = NSDate(timeIntervalSince1970: entry.dateTime)
+            let formatter = DateFormatter()
+            formatter.dateFormat = "MM-dd-yyyy"
+            let finalDate = formatter.string(from: date as Date)
+            let stringDate = String(describing: finalDate)
+            
+            let newLine = "\(stringDate),\(entry.numberOfHairsPulled),\(entry.howLong),\(entry.didYouDigest),\(entry.areaAffected!), \(entry.situation!)\n"
+            csvText.append(newLine)
+        }
+
+
+            if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+
+                let fileURL = dir.appendingPathComponent(fileName)
+
+                do {
+
+                    try csvText.write(to: fileURL, atomically: false, encoding: .utf8)
+                    
+                    let doc = UIDocument(fileURL: fileURL)
+                    
+                    print(doc)
+                    let activityViewController = UIActivityViewController(activityItems: [fileURL], applicationActivities: nil)
+                               self.present(activityViewController, animated: true, completion: nil)
+                       // just send back the first one, which ought to be the only one
+                       
+                } catch {
+
+                    print("\(error)")
+
+                }
+
+            }
+        
+      
+        
+
+        }
+    
+   
+    
+    func savePDF() {
+       
+    }
+    
     
     func grabEntries() {
         entriesArray = []
@@ -122,6 +192,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    
+    
     @objc func reloadTable() {
         grabEntries()
         currentSortId -= 1
@@ -145,6 +217,10 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @objc func goalTapped(_ sender: UITapGestureRecognizer? = nil) {
         self.performSegue(withIdentifier: "goToReflectVC", sender: nil)
+    }
+    
+    @objc func moreTapped(_ sender: UITapGestureRecognizer? = nil) {
+        createCSV()
     }
 
 
