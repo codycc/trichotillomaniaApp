@@ -103,6 +103,15 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return 175
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+              entriesArray.remove(at: indexPath.row)
+              tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
+  
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EntryCell", for: indexPath) as! EntryCell
         

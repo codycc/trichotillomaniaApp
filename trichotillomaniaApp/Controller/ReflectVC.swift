@@ -254,11 +254,13 @@ class ReflectVC: UIViewController  {
     
     
     @objc func cycleTapped(_ sender: UITapGestureRecognizer? = nil) {
-        if selectedData == 7 {
-            selectedData = 1
-        }
-        updateChart()
+        
         selectedData += 1
+        updateChart()
+        if selectedData == 6 {
+            selectedData = 0
+        }
+        
     }
     
     
