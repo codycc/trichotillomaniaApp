@@ -44,17 +44,9 @@ class EntryCell: UITableViewCell {
         let finalTime = timeFormatter.string(from: date as Date)
         timeLbl.text = String(describing: finalTime)
         dateLbl.text = String(describing: finalDate)
-        
-        
-        
         intensityLbl.text = String(entry.intensity)
-        
-        
     }
     
-   
-    
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

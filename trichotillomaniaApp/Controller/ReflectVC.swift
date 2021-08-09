@@ -10,10 +10,6 @@ import CoreData
 import Charts
 
 class ReflectVC: UIViewController  {
-   
-    
-   
-   
     @IBOutlet weak var backBtn: UIImageView!
     @IBOutlet weak var pieChartView: PieChartView!
     
@@ -37,10 +33,6 @@ class ReflectVC: UIViewController  {
         updateChart()
        
     }
-    
-    
-       
-    
     
     func fetchEntries() {
         entriesArray = []
@@ -111,12 +103,12 @@ class ReflectVC: UIViewController  {
         dataSet.colors = ChartColorTemplates.liberty()
         dataSet.entryLabelColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         
-        
         let data = PieChartData(dataSets: [dataSet])
         data.setValueTextColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
         pieChartView.data = data
         
     }
+    
     
     func showIntensity() {
         var counts: [Int32: Int32] = [:]
@@ -143,6 +135,7 @@ class ReflectVC: UIViewController  {
         pieChartView.data = data
         
     }
+    
     func showLength() {
         var counts: [Int32: Int32] = [:]
         
@@ -172,6 +165,7 @@ class ReflectVC: UIViewController  {
     func showDigested() {
         var counts: [String: Int32] = [:]
         var didYouDigest = ""
+        var lineChartEntry = [ChartDataEntry]()
         
         for entry in entriesArray {
             if entry.didYouDigest == true {
@@ -182,13 +176,10 @@ class ReflectVC: UIViewController  {
             
             counts[didYouDigest] = (counts[didYouDigest] ?? 0) + 1
         }
-        
-        var lineChartEntry = [ChartDataEntry]()
-        
+
         for entry in counts {
             let value = PieChartDataEntry(value: Double(entry.value), label: entry.key)
             lineChartEntry.append(value)
-            
         }
         
         let dataSet = PieChartDataSet(entries: lineChartEntry, label: "")
@@ -254,7 +245,6 @@ class ReflectVC: UIViewController  {
     
     
     @objc func cycleTapped(_ sender: UITapGestureRecognizer? = nil) {
-        
         selectedData += 1
         updateChart()
         if selectedData == 6 {

@@ -49,11 +49,6 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         grabEntries()
         sortDate()
-     
-      
-       
-        
-        // Do any additional setup after loading the view.
     }
     
     func shareFiles() {
@@ -62,7 +57,6 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func createCSV() {
         let fileName =  "trichJournalLog1.csv"
-
         var csvText = "Date,# Of Hairs, length(minutes), Digested?, Area, Situation\n"
         
         for entry in entriesArray {
@@ -82,12 +76,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 let fileURL = dir.appendingPathComponent(fileName)
 
                 do {
-
                     try csvText.write(to: fileURL, atomically: false, encoding: .utf8)
-                    
                     let doc = UIDocument(fileURL: fileURL)
-                    
-                    print(doc)
                     let activityViewController = UIActivityViewController(activityItems: [fileURL], applicationActivities: nil)
                                self.present(activityViewController, animated: true, completion: nil)
                        // just send back the first one, which ought to be the only one
@@ -97,16 +87,9 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     print("\(error)")
 
                 }
-
             }
-        
-      
-        
-
         }
-    
-   
-    
+
     func savePDF() {
        
     }
@@ -131,39 +114,32 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
        
         switch currentSortId {
         case 1:
-            print("number of hairs")
             sortLbl.text = "Hairs"
             entriesArray = entriesArray.sorted(by: { $0.numberOfHairsPulled < $1.numberOfHairsPulled })
             
         case 2:
-            
-            print("intesntiy")
             sortLbl.text = "Intensity"
             entriesArray = entriesArray.sorted(by: { $0.intensity < $1.intensity })
             
         case 3:
-            print("length of time")
             sortLbl.text = "Time"
             entriesArray = entriesArray.sorted(by: { $0.howLong < $1.howLong })
             
         case 4:
-            
-            print("date")
             sortLbl.text = "Date"
             entriesArray = entriesArray.sorted(by: { $0.dateTime < $1.dateTime })
-            
-            
+
         default:
             print("hello")
             
         }
         
     }
+    
     func sortDate() {
         entriesArray = entriesArray.sorted(by: { $0.dateTime < $1.dateTime })
         tableView.reloadData()
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return entriesArray.count
