@@ -184,8 +184,6 @@ class NewEntryVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, U
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        
         if pickerView == situationPicker {
             selectedSituation = situations[row].place!
             situationTextField.text = selectedSituation
@@ -198,8 +196,6 @@ class NewEntryVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, U
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
-        
         if pickerView == situationPicker {
             return situations.count
         } else if pickerView == affectedAreaPicker {
@@ -207,7 +203,6 @@ class NewEntryVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, U
         } else {
             return 0
         }
-        
     }
     
     
