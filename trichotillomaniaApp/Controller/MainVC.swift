@@ -22,8 +22,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let requestEntry = NSFetchRequest<NSFetchRequestResult>(entityName: "Entry")
-    var employeeArray:[Dictionary<String, AnyObject>] =  Array()
-
+    
     var entriesArray = [Entry]()
     var currentSortId = 1
   
