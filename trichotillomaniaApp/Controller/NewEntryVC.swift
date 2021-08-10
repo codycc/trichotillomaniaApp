@@ -112,9 +112,6 @@ class NewEntryVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, U
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.frame.width, height: 200)
-    }
     func textFieldDidEndEditing(_ textField: UITextField) {
        checkIfTextFieldsEmpty()
     }
